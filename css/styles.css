@@ -1,0 +1,63 @@
+/* site wide */
+
+body {
+  background-color: #fafafa;
+  color: #52575d;
+  line-height: 1.5rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-family: 'Roboto', sans-serif;
+
+}
+
+.container-fluid {
+  padding: 2% 5%;
+}
+
+.icons {
+  display: block;
+  width: 50%;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.hidden {
+visibility: hidden;
+}
+
+.entry {
+  margin-bottom: 20px;
+}
+
+/* section */
+#header {
+  padding: 40px 0;
+  background-image: linear-gradient(#07689f,#2d4059);
+  color: white;
+}
+
+.ribbon {
+  text-align: center;
+  background-color: #ff7e67;
+  padding: 10px 0;
+  color: white;
+
+}
+
+.spendingArea {
+  text-align: center;
+}
+
+#footer {
+text-align: center;
+margin: 50px auto 0;
+padding: 40px;
+background-color: #2d4059;
+color: #e5e5e5;
+}
+
+#footer a{
+  color: #a3d2ca
+}

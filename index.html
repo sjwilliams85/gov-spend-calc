@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>UK Government Spending calculator</title>
+  <meta name="description" content="Calculate what the UK government could do with your money">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+<!-- Heading -->
+  <section id="header">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-sm-12 col-lg-8">
+      <h1>What could the UK government do with your money instead?</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et mollis felis. Mauris in nisl lacus. Pellentesque sed luctus ipsum, eget mollis felis. Morbi fermentum cursus est eu pretium. Donec nec porttitor tellus, non finibus nibh. In
+        mattis ante fringilla ipsum auctor, ut dignissim nunc interdum.</p>
+
+<!-- Form -->
+
+      <form>
+        <div class="form-group">
+          <label for="spend">Spend </label>
+          <input id="spend" type="number" name="spend" value="" class="form-control form-control-lg" placeholder="£"aria-describedby="spendHelp">
+          <small id="spendHelp" class="form-text">
+            Enter a complete number above or use one of the the multiples below.
+          </small>
+        </div>
+        <div class="form-group form-check">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="million" name="multiple" value="Million">
+            <label class="form-check-label" for="million">Million</label><br>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="billion" name="multiple" value="Billion">
+            <label class="form-check-label" for="female">Billion</label><br>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="trillion" name="multiple" value="Trillion">
+            <label class="form-check-label" for="female">Trillion</label>
+          </div>
+        </div>
+        <input onclick="getSpend()" type="button" class="btn btn-light" value="Calculate">
+      </form>
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Ribbon -->
+
+  <section id="spendAmount">
+    <div class="ribbon hidden">
+    <h3 id="spendStatement"></h3>
+    </div>
+  </section>
+
+<!-- Main -->
+
+  <section id="health" class="spendingArea">
+    <div class="container-fluid">
+    <div class="row">
+
+        <div class="col-lg-3 col-md-4 entry">
+      <h3>The annual salaries of <span id=nursesSalary> XX</span> new nurses</h4>
+      <img class="icons" src="images/nurse.png" alt="nurse">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+  <div class="col-lg-3 col-md-4 entry">
+      <h3><span id="mriScanners">XX</span> MRI scanners</h4>
+      <img class="icons" src="images/tomography.png" alt="MRI scan">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="col-lg-3 col-md-4 entry">
+        <h3><span id="hipOps">XX</span> hip operations</h4>
+        <img class="icons" src="images/surgery.png" alt="surgery">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <div class="col-lg-3 col-md-4 entry">
+          <h3>The average health care costs of <span id="avHealthCost">XX</span> people</h4>
+          <img class="icons" src="images/patient.png" alt="patient">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+  </section>
+
+  <section id="education" class="spendingArea">
+    <div class="container-fluid">
+    <div class="row">
+
+        <div class="col-lg-3 col-md-4 entry">
+      <h3>The annual salaries of <span id=teachersSalary> XX</span> new teachers</h4>
+      <img class="icons" src="images/teacher.png" alt="teacher">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+  <div class="col-lg-3 col-md-4 entry">
+      <h3><span id="laptops">XX</span> laptops for school children</h4>
+      <img class="icons" src="images/laptop.png" alt="laptop">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="col-lg-3 col-md-4 entry">
+        <h3>A year's tuition fees for <span id="uniFees">XX</span> students</h4>
+        <img class="icons" src="images/student.png" alt="student">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <div class="col-lg-3 col-md-4 entry">
+          <h3><span id="schoolBuildings">XX</span> square meters of new school buildings</h4>
+          <img class="icons" src="images/school.png" alt="school">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+  </section>
+
+  <section id="environment" class="spendingArea">
+    <div class="container-fluid">
+    <div class="row">
+
+        <div class="col-lg-3 col-md-4 entry">
+      <h3>Loft insulation for <span id=loft>XX</span> houses</h4>
+      <img class="icons" src="images/roof.png" alt="roof">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+  <div class="col-lg-3 col-md-4 entry">
+      <h3><span id="bicycles">XX</span> bicyles for commuters</h4>
+      <img class="icons" src="images/bike.png" alt="bicyle">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="col-lg-3 col-md-4 entry">
+        <h3> <span id="windTurbines">XX</span> wind turbines</h4>
+        <img class="icons" src="images/wind-turbine (1).png" alt="wind turbine">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <div class="col-lg-3 col-md-4 entry">
+          <h3>Solar pannels for <span id="solarPannels">XX</span> houses</h4>
+          <img class="icons" src="images/solar-panel.png" alt="solar panel">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+  </section>
+
+</section>
+
+<section id="Justice" class="spendingArea">
+  <div class="container-fluid">
+  <div class="row">
+
+      <div class="col-lg-3 col-md-4 entry">
+<h3>The annual salaries of <span id=policeSalary> XX</span> new police officers</h4>
+    <img class="icons" src="images/adhesive-tape.png" alt="roof">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+<div class="col-lg-3 col-md-4 entry">
+    <h3>Drug rehabilitation for <span id="drugRehab">XX</span> addicts</h4>
+    <img class="icons" src="images/drug.png" alt="bicyle">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div class="col-lg-3 col-md-4 entry">
+      <h3>Noweigan-style rehabilitation for <span id="prisoners">XX</span> prisoners</h4>
+      <img class="icons" src="images/change.png" alt="wind turbine">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="col-lg-3 col-md-4 entry">
+    <h3>The annual salaries of <span id=victimSalary> XX</span> new victim support workers</h4>
+        <img class="icons" src="images/hand.png" alt="solar panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+  </div>
+</section>
+
+  <section id="footer">
+    <div class="container-fluid">
+      <div>
+<p>Copyright © Steven Williams 2020</p>
+        <p> Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p></div>
+    </div>
+  </section>
+
+
+  <script src="js/index.js" charset="utf-8"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>
